@@ -54,7 +54,11 @@ async function createApp() {
     next();
   });
 
-  await seedDatabase();
+  try {
+    await seedDatabase();
+  } catch (err) {
+    console.error("Database seeding failed (non-fatal):", err);
+  }
   await registerRoutes(httpServer, app);
 
   app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
@@ -70,7 +74,10 @@ async function createApp() {
 
 async function getApp() {
   if (!appPromise) {
-    appPromise = createApp();
+    appPromise = createApp().catch((err) => {
+      appPromise = null;
+      throw err;
+    });
   }
   return appPromise;
 }
