@@ -1,5 +1,8 @@
 import { storage } from "./storage";
-import { log } from "./index";
+
+function log(message: string, source = "seed") {
+  console.log(`[${source}] ${message}`);
+}
 
 async function seedGroups() {
   const existing = await storage.listGroups();

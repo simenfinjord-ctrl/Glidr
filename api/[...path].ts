@@ -1,5 +1,4 @@
 import express, { type NextFunction, type Request, type Response } from "express";
-import path from "path";
 import { createServer } from "http";
 import { registerRoutes } from "../server/routes";
 import { setupAuth } from "../server/auth";
@@ -64,12 +63,6 @@ async function createApp() {
     console.error("Internal Server Error:", err);
     if (res.headersSent) return next(err);
     return res.status(status).json({ message });
-  });
-
-  const distPath = path.resolve(process.cwd(), "dist/public");
-  app.use(express.static(distPath));
-  app.get("/{*path}", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
   });
 
   return app;
