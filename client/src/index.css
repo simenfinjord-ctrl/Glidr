@@ -48,23 +48,23 @@
 }
 
 :root {
-  --background: 210 50% 92%;
-  --foreground: 220 20% 14%;
+  --background: 145 50% 92%;
+  --foreground: 145 20% 14%;
 
   --card: 0 0% 100%;
-  --card-foreground: 220 20% 14%;
+  --card-foreground: 145 20% 14%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 220 20% 14%;
+  --popover-foreground: 145 20% 14%;
 
   --primary: 145 70% 40%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 214 16% 94%;
-  --secondary-foreground: 220 14% 24%;
+  --secondary: 145 16% 94%;
+  --secondary-foreground: 145 14% 24%;
 
-  --muted: 214 12% 95%;
-  --muted-foreground: 220 10% 46%;
+  --muted: 145 12% 95%;
+  --muted-foreground: 145 10% 46%;
 
   --accent: 145 70% 40%;
   --accent-foreground: 0 0% 100%;
@@ -72,18 +72,18 @@
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 216 14% 90%;
-  --input: 216 14% 87%;
+  --border: 145 14% 90%;
+  --input: 145 14% 87%;
   --ring: 145 70% 40%;
 
   --sidebar: 0 0% 100%;
-  --sidebar-foreground: 220 20% 14%;
-  --sidebar-border: 216 14% 90%;
+  --sidebar-foreground: 145 20% 14%;
+  --sidebar-border: 145 14% 90%;
   --sidebar-primary: 145 70% 40%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 214 12% 95%;
-  --sidebar-accent-foreground: 220 14% 24%;
-  --sidebar-ring: 215 80% 48%;
+  --sidebar-accent: 145 12% 95%;
+  --sidebar-accent-foreground: 145 14% 24%;
+  --sidebar-ring: 145 80% 48%;
 
   --radius: 12px;
 
@@ -93,42 +93,42 @@
 }
 
 .dark {
-  --background: 224 20% 10%;
-  --foreground: 210 20% 95%;
+  --background: 145 20% 10%;
+  --foreground: 145 20% 95%;
 
-  --card: 224 18% 13%;
-  --card-foreground: 210 20% 95%;
+  --card: 145 18% 13%;
+  --card-foreground: 145 20% 95%;
 
-  --popover: 224 18% 13%;
-  --popover-foreground: 210 20% 95%;
+  --popover: 145 18% 13%;
+  --popover-foreground: 145 20% 95%;
 
   --primary: 145 70% 48%;
-  --primary-foreground: 224 20% 10%;
+  --primary-foreground: 145 20% 10%;
 
-  --secondary: 224 14% 20%;
-  --secondary-foreground: 210 20% 95%;
+  --secondary: 145 14% 20%;
+  --secondary-foreground: 145 20% 95%;
 
-  --muted: 224 14% 20%;
-  --muted-foreground: 215 14% 65%;
+  --muted: 145 14% 20%;
+  --muted-foreground: 145 14% 65%;
 
   --accent: 145 70% 48%;
-  --accent-foreground: 224 20% 10%;
+  --accent-foreground: 145 20% 10%;
 
   --destructive: 0 78% 55%;
-  --destructive-foreground: 224 20% 10%;
+  --destructive-foreground: 145 20% 10%;
 
-  --border: 224 12% 22%;
-  --input: 224 12% 26%;
+  --border: 145 12% 22%;
+  --input: 145 12% 26%;
   --ring: 145 70% 48%;
 
-  --sidebar: 224 18% 13%;
-  --sidebar-foreground: 210 20% 95%;
-  --sidebar-border: 224 12% 22%;
+  --sidebar: 145 18% 13%;
+  --sidebar-foreground: 145 20% 95%;
+  --sidebar-border: 145 12% 22%;
   --sidebar-primary: 145 70% 48%;
-  --sidebar-primary-foreground: 224 20% 10%;
-  --sidebar-accent: 224 14% 20%;
-  --sidebar-accent-foreground: 210 20% 95%;
-  --sidebar-ring: 215 85% 58%;
+  --sidebar-primary-foreground: 145 20% 10%;
+  --sidebar-accent: 145 14% 20%;
+  --sidebar-accent-foreground: 145 20% 95%;
+  --sidebar-ring: 145 85% 58%;
 }
 
 @layer base {
@@ -151,17 +151,17 @@
 
 @layer utilities {
   .fs-grid {
-    background: hsl(210 50% 88%);
+    background: hsl(145 50% 88%);
   }
 
   .dark .fs-grid {
-    background: hsl(224 20% 8%);
+    background: hsl(145 20% 8%);
   }
 
   .fs-card {
     background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
-    box-shadow: 0 1px 3px hsl(220 20% 14% / 0.06), 0 1px 2px hsl(220 20% 14% / 0.04);
+    box-shadow: 0 1px 3px hsl(145 20% 14% / 0.06), 0 1px 2px hsl(145 20% 14% / 0.04);
   }
 
   .fs-focus {
