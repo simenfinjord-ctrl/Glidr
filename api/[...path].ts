@@ -83,6 +83,16 @@ async function getApp() {
 }
 
 export default async function handler(req: Request, res: Response) {
-  const app = await getApp();
-  return app(req, res);
+  if (req.url === "/api/health" || req.url === "/api/health/") {
+    return res.status(200).json({ ok: true, env: { db: !!process.env.DATABASE_URL, session: !!process.env.SESSION_SECRET } });
+  }
+  try {
+    const app = await getApp();
+    return app(req, res);
+  } catch (err: any) {
+    console.error("[handler] Fatal error:", err);
+    if (!res.headersSent) {
+      res.status(503).json({ message: "Service unavailable", error: err?.message });
+    }
+  }
 }
